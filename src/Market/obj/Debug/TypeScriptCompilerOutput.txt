@@ -1,0 +1,8 @@
+c:\Users\david\documents\visual studio 2015\Projects\Market\src\Market\App\app.component.js
+c:\Users\david\documents\visual studio 2015\Projects\Market\src\Market\App\app.component.js.map
+c:\Users\david\documents\visual studio 2015\Projects\Market\src\Market\App\components\main-app.component.js
+c:\Users\david\documents\visual studio 2015\Projects\Market\src\Market\App\components\main-app.component.js.map
+c:\Users\david\documents\visual studio 2015\Projects\Market\src\Market\App\app.module.js
+c:\Users\david\documents\visual studio 2015\Projects\Market\src\Market\App\app.module.js.map
+c:\Users\david\documents\visual studio 2015\Projects\Market\src\Market\App\main.js
+c:\Users\david\documents\visual studio 2015\Projects\Market\src\Market\App\main.js.map
