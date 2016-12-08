@@ -34,7 +34,9 @@
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+          "BusinessObjectLayer": "1.0.0",
+          "BusinessLogicLayer": "1.0.0"
         },
         "compile": {
           "Market.dll": {}
@@ -2805,6 +2807,32 @@
           "System.Xml.XDocument": "4.0.11",
           "System.Xml.XPath": "4.0.1"
         }
+      },
+      "BusinessLogicLayer/1.0.0": {
+        "dependencies": {
+          "BusinessObjectLayer": "1.0.0",
+          "DataAccessLayer": "1.0.0",
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "BusinessLogicLayer.dll": {}
+        }
+      },
+      "BusinessObjectLayer/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "BusinessObjectLayer.dll": {}
+        }
+      },
+      "DataAccessLayer/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "DataAccessLayer.dll": {}
+        }
       }
     },
     ".NETCoreApp,Version=v1.0/": {
@@ -2828,7 +2856,9 @@
           "Microsoft.Extensions.Logging.Console": "1.0.0",
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+          "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+          "BusinessObjectLayer": "1.0.0",
+          "BusinessLogicLayer": "1.0.0"
         },
         "runtime": {
           "Market.dll": {}
@@ -5506,6 +5536,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "BusinessLogicLayer/1.0.0": {
+        "dependencies": {
+          "BusinessObjectLayer": "1.0.0",
+          "DataAccessLayer": "1.0.0",
+          "NETStandard.Library": "1.6.0"
+        },
+        "runtime": {
+          "BusinessLogicLayer.dll": {}
+        }
+      },
+      "BusinessObjectLayer/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "runtime": {
+          "BusinessObjectLayer.dll": {}
+        }
+      },
+      "DataAccessLayer/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "runtime": {
+          "DataAccessLayer.dll": {}
+        }
       }
     }
   },
@@ -6549,6 +6605,21 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-FLhdYJx4331oGovQypQ8JIw2kEmNzCsjVOVYY/16kZTUoquZG85oVn7yUhBE2OZt1yGPSXAL0HTEfzjlbNpM7Q=="
+    },
+    "BusinessLogicLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessObjectLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAccessLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

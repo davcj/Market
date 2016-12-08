@@ -1,0 +1,8 @@
+#:E:\MARKET\src\BusinessLogicLayer\BusinessLogicLayer.xproj
+E:\MARKET\src\BusinessLogicLayer\BusinessLogicLayer.xproj|E:\MARKET\src\BusinessObjectLayer\BusinessObjectLayer.xproj
+E:\MARKET\src\BusinessLogicLayer\BusinessLogicLayer.xproj|E:\MARKET\src\DataAccessLayer\DataAccessLayer.xproj
+#:E:\MARKET\src\Market\Market.xproj
+E:\MARKET\src\Market\Market.xproj|E:\MARKET\src\BusinessObjectLayer\BusinessObjectLayer.xproj
+E:\MARKET\src\Market\Market.xproj|E:\MARKET\src\BusinessLogicLayer\BusinessLogicLayer.xproj
+E:\MARKET\src\BusinessLogicLayer\BusinessLogicLayer.xproj|E:\MARKET\src\BusinessObjectLayer\BusinessObjectLayer.xproj
+E:\MARKET\src\BusinessLogicLayer\BusinessLogicLayer.xproj|E:\MARKET\src\DataAccessLayer\DataAccessLayer.xproj

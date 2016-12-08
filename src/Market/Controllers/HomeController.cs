@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using BusinessObjectLayer.Users;
 
 namespace Market.Controllers
 {
@@ -10,7 +11,11 @@ namespace Market.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            Trader trader = new Trader();
+            trader.username = "sad";
+            trader.password = "adasdsd";
+            trader.balance = 1000;
+            return View(trader);
         }
 
         public IActionResult About()

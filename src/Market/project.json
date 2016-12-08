@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-Market-1ab149dc-1f46-4bd5-85fd-cc8098cfbf5c",
 
   "dependencies": {
@@ -43,7 +43,9 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "BusinessObjectLayer": "1.0.0-*",
+    "BusinessLogicLayer": "1.0.0-*"
   },
 
   "tools": {

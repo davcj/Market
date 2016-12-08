@@ -4358,6 +4358,47 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "BusinessLogicLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "BusinessObjectLayer": "1.0.0",
+          "DataAccessLayer": "1.0.0",
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "netstandard1.6/BusinessLogicLayer.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/BusinessLogicLayer.dll": {}
+        }
+      },
+      "BusinessObjectLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "netstandard1.6/BusinessObjectLayer.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/BusinessObjectLayer.dll": {}
+        }
+      },
+      "DataAccessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "netstandard1.6/DataAccessLayer.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/DataAccessLayer.dll": {}
+        }
       }
     }
   },
@@ -11016,10 +11057,27 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "BusinessLogicLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLogicLayer/project.json",
+      "msbuildProject": "../BusinessLogicLayer/BusinessLogicLayer.xproj"
+    },
+    "BusinessObjectLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusinessObjectLayer/project.json",
+      "msbuildProject": "../BusinessObjectLayer/BusinessObjectLayer.xproj"
+    },
+    "DataAccessLayer/1.0.0": {
+      "type": "project",
+      "path": "../DataAccessLayer/project.json",
+      "msbuildProject": "../DataAccessLayer/DataAccessLayer.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
+      "BusinessLogicLayer >= 1.0.0-*",
+      "BusinessObjectLayer >= 1.0.0-*",
       "Microsoft.AspNetCore.Authentication.Cookies >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 1.0.0",
