@@ -20,6 +20,7 @@ namespace BusinessObjectLayer.Entities
         public string Password { get; set; }
         public string Email { get; set; }
         public string Name { get; set; }
+        public string SecondName { get; set; }
         public string Mobile { get; set; }
         public DateTime? InsertDate { get; set; }
         public DateTime? UpdateDate { get; set; }

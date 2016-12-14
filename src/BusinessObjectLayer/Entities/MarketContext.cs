@@ -182,6 +182,10 @@ namespace BusinessObjectLayer.Entities
                     .HasColumnName("Attr_3")
                     .HasColumnType("text");
 
+                entity.Property(e => e.Attr4)
+                    .HasColumnName("Attr_4")
+                    .HasColumnType("text");
+
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasColumnType("text");
@@ -248,6 +252,10 @@ namespace BusinessObjectLayer.Entities
                     .HasColumnType("text");
 
                 entity.Property(e => e.SaveDate).HasColumnType("datetime");
+
+                entity.Property(e => e.SecondName)
+                    .HasColumnName("Second Name")
+                    .HasColumnType("text");
 
                 entity.Property(e => e.UpdateDate).HasColumnType("datetime");
 

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using BusinessObjectLayer.Users;
+using BusinessObjectLayer.Entities;
+using System.Diagnostics;
 
 namespace Market.Controllers
 {
@@ -11,11 +12,15 @@ namespace Market.Controllers
     {
         public IActionResult Index()
         {
-            Trader trader = new Trader();
-             trader.username = "sad";
-             trader.password = "adasdsd";
-             trader.balance = 1000;
-             return View(trader);
+            using(var context = new MarketContext())
+            {
+                List<Trader> list = context.Trader.ToList();
+                foreach(Trader item in list)
+                {
+                    Debug.WriteLine("Ime Trejderja je : " + item.Name);
+                }
+            }
+             return View();
            
         }
 

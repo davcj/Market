@@ -15,6 +15,7 @@ namespace BusinessObjectLayer.Entities
         public string Attr1 { get; set; }
         public string Attr2 { get; set; }
         public string Attr3 { get; set; }
+        public string Attr4 { get; set; }
 
         public virtual ICollection<SocialMedia> SocialMedia { get; set; }
     }
