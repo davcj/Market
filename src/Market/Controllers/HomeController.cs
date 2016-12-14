@@ -12,10 +12,11 @@ namespace Market.Controllers
         public IActionResult Index()
         {
             Trader trader = new Trader();
-            trader.username = "sad";
-            trader.password = "adasdsd";
-            trader.balance = 1000;
-            return View(trader);
+             trader.username = "sad";
+             trader.password = "adasdsd";
+             trader.balance = 1000;
+             return View(trader);
+           
         }
 
         public IActionResult About()

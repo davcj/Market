@@ -14,11 +14,3 @@ E:\MARKET\src\Market\App\app.module.js
 E:\MARKET\src\Market\App\app.module.js.map
 E:\MARKET\src\Market\App\main.js
 E:\MARKET\src\Market\App\main.js.map
-E:\MARKET\src\Market\App\app.component.js
-E:\MARKET\src\Market\App\app.component.js.map
-E:\MARKET\src\Market\App\components\main-app.component.js
-E:\MARKET\src\Market\App\components\main-app.component.js.map
-E:\MARKET\src\Market\App\app.module.js
-E:\MARKET\src\Market\App\app.module.js.map
-E:\MARKET\src\Market\App\main.js
-E:\MARKET\src\Market\App\main.js.map

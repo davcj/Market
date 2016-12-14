@@ -11,12 +11,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Market", "src\Market\Market.xproj", "{CA59F71E-34AD-4B1F-B0B8-EF15AD46A771}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C0EA398A-BB28-45AD-B127-6E3990177359} = {C0EA398A-BB28-45AD-B127-6E3990177359}
+		{B86497DF-F05F-4132-9209-6D81B1E2D1A0} = {B86497DF-F05F-4132-9209-6D81B1E2D1A0}
+	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BusinessObjectLayer", "src\BusinessObjectLayer\BusinessObjectLayer.xproj", "{C0EA398A-BB28-45AD-B127-6E3990177359}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BusinessLogicLayer", "src\BusinessLogicLayer\BusinessLogicLayer.xproj", "{B86497DF-F05F-4132-9209-6D81B1E2D1A0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0B62A763-F1CE-4C24-8FD6-74008FBC5652} = {0B62A763-F1CE-4C24-8FD6-74008FBC5652}
+		{C0EA398A-BB28-45AD-B127-6E3990177359} = {C0EA398A-BB28-45AD-B127-6E3990177359}
+	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DataAccessLayer", "src\DataAccessLayer\DataAccessLayer.xproj", "{0B62A763-F1CE-4C24-8FD6-74008FBC5652}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TestLibrary", "src\TestLibrary\TestLibrary.xproj", "{FBB475C1-D10E-4EA4-BF50-899CB3DA9BB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +50,10 @@ Global
 		{0B62A763-F1CE-4C24-8FD6-74008FBC5652}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B62A763-F1CE-4C24-8FD6-74008FBC5652}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B62A763-F1CE-4C24-8FD6-74008FBC5652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBB475C1-D10E-4EA4-BF50-899CB3DA9BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB475C1-D10E-4EA4-BF50-899CB3DA9BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBB475C1-D10E-4EA4-BF50-899CB3DA9BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBB475C1-D10E-4EA4-BF50-899CB3DA9BB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,5 +63,6 @@ Global
 		{C0EA398A-BB28-45AD-B127-6E3990177359} = {A9921999-C3AE-4089-9550-09904AF515CF}
 		{B86497DF-F05F-4132-9209-6D81B1E2D1A0} = {A9921999-C3AE-4089-9550-09904AF515CF}
 		{0B62A763-F1CE-4C24-8FD6-74008FBC5652} = {A9921999-C3AE-4089-9550-09904AF515CF}
+		{FBB475C1-D10E-4EA4-BF50-899CB3DA9BB3} = {A9921999-C3AE-4089-9550-09904AF515CF}
 	EndGlobalSection
 EndGlobal

@@ -4361,43 +4361,36 @@
       },
       "BusinessLogicLayer/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
+        "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "BusinessObjectLayer": "1.0.0",
-          "DataAccessLayer": "1.0.0",
-          "NETStandard.Library": "1.6.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0",
+          "Microsoft.NETCore.App": "1.0.0"
         },
         "compile": {
-          "netstandard1.6/BusinessLogicLayer.dll": {}
+          "netcoreapp1.0/BusinessLogicLayer.dll": {}
         },
         "runtime": {
-          "netstandard1.6/BusinessLogicLayer.dll": {}
+          "netcoreapp1.0/BusinessLogicLayer.dll": {}
         }
       },
       "BusinessObjectLayer/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
+        "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "NETStandard.Library": "1.6.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0",
+          "Microsoft.NETCore.App": "1.0.0"
         },
         "compile": {
-          "netstandard1.6/BusinessObjectLayer.dll": {}
+          "netcoreapp1.0/BusinessObjectLayer.dll": {}
         },
         "runtime": {
-          "netstandard1.6/BusinessObjectLayer.dll": {}
-        }
-      },
-      "DataAccessLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0"
-        },
-        "compile": {
-          "netstandard1.6/DataAccessLayer.dll": {}
-        },
-        "runtime": {
-          "netstandard1.6/DataAccessLayer.dll": {}
+          "netcoreapp1.0/BusinessObjectLayer.dll": {}
         }
       }
     }
@@ -11067,11 +11060,6 @@
       "type": "project",
       "path": "../BusinessObjectLayer/project.json",
       "msbuildProject": "../BusinessObjectLayer/BusinessObjectLayer.xproj"
-    },
-    "DataAccessLayer/1.0.0": {
-      "type": "project",
-      "path": "../DataAccessLayer/project.json",
-      "msbuildProject": "../DataAccessLayer/DataAccessLayer.xproj"
     }
   },
   "projectFileDependencyGroups": {
