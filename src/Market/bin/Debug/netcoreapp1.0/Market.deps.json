@@ -2105,7 +2105,9 @@
           "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.1"
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.1",
+          "BusinessObjectLayer": "1.0.0",
+          "DataAccessLayer": "1.0.0"
         },
         "runtime": {
           "BusinessLogicLayer.dll": {}
@@ -2127,6 +2129,22 @@
         },
         "compile": {
           "BusinessObjectLayer.dll": {}
+        }
+      },
+      "DataAccessLayer/1.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.0.1",
+          "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.1",
+          "BusinessObjectLayer": "1.0.0"
+        },
+        "runtime": {
+          "DataAccessLayer.dll": {}
+        },
+        "compile": {
+          "DataAccessLayer.dll": {}
         }
       },
       "Libuv/1.9.0": {
@@ -4421,6 +4439,11 @@
       "sha512": ""
     },
     "BusinessObjectLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAccessLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

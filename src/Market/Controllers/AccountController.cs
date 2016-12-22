@@ -11,12 +11,17 @@ using Microsoft.Extensions.Logging;
 using Market.Models;
 using Market.Models.AccountViewModels;
 using Market.Services;
+using BusinessLogicLayer;
+using BusinessObjectLayer.Entities;
+using System.Diagnostics;
 
 namespace Market.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        AccountBusiness _accountBusiness = new AccountBusiness();
+
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
@@ -110,6 +115,23 @@ namespace Market.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    // Ce uspe registracija uporabnika, potem ga dodamo še v tabelo TRADER
+                    Trader _trader = new Trader();
+                    _trader.UserName = model.Email;
+                    _trader.Name = model.FirstName;
+                    _trader.Password = model.Password;
+                    _trader.SecondName = model.LastName;
+                    _trader.Email = model.Email;
+                    _trader.Mobile = "040-111-111";
+                    _trader.IdLogin = model.Email;
+                    if (_accountBusiness.RegisterTrader(_trader))
+                    {
+                        Debug.WriteLine("Nov uporabnik je bil dodan tudi v tabelo TRADER");
+                    }else
+                    {
+                        Debug.WriteLine("NAPAKA !! Uporabnik NI BIL dodan v tabelo TRADER !!!!");
+                    }
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
                     // Send an email with this link
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

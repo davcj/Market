@@ -6,17 +6,16 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.0": {
-      "BusinessLogicLayer/1.0.0": {
+      "DataAccessLayer/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0",
-          "BusinessObjectLayer": "1.0.0",
-          "DataAccessLayer": "1.0.0"
+          "BusinessObjectLayer": "1.0.0"
         },
         "runtime": {
-          "BusinessLogicLayer.dll": {}
+          "DataAccessLayer.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication/1.0.0": {
@@ -452,23 +451,11 @@
         "runtime": {
           "BusinessObjectLayer.dll": {}
         }
-      },
-      "DataAccessLayer/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
-          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0",
-          "BusinessObjectLayer": "1.0.0"
-        },
-        "runtime": {
-          "DataAccessLayer.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "BusinessLogicLayer/1.0.0": {
+    "DataAccessLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -729,11 +716,6 @@
       "sha512": "sha512-TWZnuiJgPDAEEUfobD7njXvSVR2Toz+jvKWds6yL4oSztmKQfnWzucczjzA+6Dv1bktBdY71sZW1YN0X6m9chQ=="
     },
     "BusinessObjectLayer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DataAccessLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

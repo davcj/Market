@@ -221,6 +221,7 @@
 -r:"C:\Users\JAKIC\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 -r:"E:\MARKET\src\BusinessLogicLayer\bin\Debug\netcoreapp1.0\BusinessLogicLayer.dll"
 -r:"E:\MARKET\src\BusinessObjectLayer\bin\Debug\netcoreapp1.0\BusinessObjectLayer.dll"
+-r:"E:\MARKET\src\DataAccessLayer\bin\Debug\netcoreapp1.0\DataAccessLayer.dll"
 -resource:"E:\MARKET\src\Market\obj\Debug\netcoreapp1.0\Marketdotnet-compile.deps.json",Market.deps.json
 "E:\MARKET\src\Market\Program.cs"
 "E:\MARKET\src\Market\Startup.cs"

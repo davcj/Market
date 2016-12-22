@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"E:\MARKET\src\BusinessLogicLayer\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"E:\MARKET\src\BusinessLogicLayer\bin\Debug\netcoreapp1.0\BusinessLogicLayer.dll"
+"E:\MARKET\src\DataAccessLayer\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"E:\MARKET\src\DataAccessLayer\bin\Debug\netcoreapp1.0\DataAccessLayer.dll"
 -r:"C:\Users\JAKIC\.nuget\packages\Microsoft.AspNetCore.Authentication\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authentication.dll"
 -r:"C:\Users\JAKIC\.nuget\packages\Microsoft.AspNetCore.Authentication.Cookies\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authentication.Cookies.dll"
 -r:"C:\Users\JAKIC\.nuget\packages\Microsoft.AspNetCore.Cryptography.Internal\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Cryptography.Internal.dll"
@@ -132,7 +132,7 @@
 -r:"C:\Users\JAKIC\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\JAKIC\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 -r:"E:\MARKET\src\BusinessObjectLayer\bin\Debug\netcoreapp1.0\BusinessObjectLayer.dll"
--r:"E:\MARKET\src\DataAccessLayer\bin\Debug\netcoreapp1.0\DataAccessLayer.dll"
-"E:\MARKET\src\BusinessLogicLayer\AccountBusiness.cs"
-"E:\MARKET\src\BusinessLogicLayer\program.cs"
-"E:\MARKET\src\BusinessLogicLayer\Properties\AssemblyInfo.cs"
+"E:\MARKET\src\DataAccessLayer\Class1.cs"
+"E:\MARKET\src\DataAccessLayer\program.cs"
+"E:\MARKET\src\DataAccessLayer\Properties\AssemblyInfo.cs"
+"E:\MARKET\src\DataAccessLayer\QUERIES\TRADER\RegisterNewTraderQuery.cs"

@@ -13,7 +13,10 @@
     "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
-    "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0"
+    "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0",
+
+    "BusinessObjectLayer": "1.0.0-*",
+    "DataAccessLayer": "1.0.0-*"
   },
   "tools": {
     "Microsoft.EntityFrameworkCore.Tools": {

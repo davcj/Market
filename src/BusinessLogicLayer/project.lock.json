@@ -2989,6 +2989,41 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "BusinessObjectLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0",
+          "Microsoft.NETCore.App": "1.0.0"
+        },
+        "compile": {
+          "netcoreapp1.0/BusinessObjectLayer.dll": {}
+        },
+        "runtime": {
+          "netcoreapp1.0/BusinessObjectLayer.dll": {}
+        }
+      },
+      "DataAccessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.0",
+        "dependencies": {
+          "BusinessObjectLayer": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0",
+          "Microsoft.NETCore.App": "1.0.0"
+        },
+        "compile": {
+          "netcoreapp1.0/DataAccessLayer.dll": {}
+        },
+        "runtime": {
+          "netcoreapp1.0/DataAccessLayer.dll": {}
+        }
       }
     }
   },
@@ -8499,10 +8534,22 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "BusinessObjectLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusinessObjectLayer/project.json",
+      "msbuildProject": "../BusinessObjectLayer/BusinessObjectLayer.xproj"
+    },
+    "DataAccessLayer/1.0.0": {
+      "type": "project",
+      "path": "../DataAccessLayer/project.json",
+      "msbuildProject": "../DataAccessLayer/DataAccessLayer.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
+      "BusinessObjectLayer >= 1.0.0-*",
+      "DataAccessLayer >= 1.0.0-*",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 1.0.0-preview2-final",
       "Microsoft.EntityFrameworkCore.SqlServer >= 1.0.0",

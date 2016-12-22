@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer
+namespace DataAccessLayer
 {
-    public class Class1
+    public class program
     {
-        public Class1()
+        public static void Main(string[] args)
         {
+
         }
     }
 }
