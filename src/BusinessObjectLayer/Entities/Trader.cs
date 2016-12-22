@@ -26,6 +26,7 @@ namespace BusinessObjectLayer.Entities
         public DateTime? UpdateDate { get; set; }
         public DateTime? SaveDate { get; set; }
         public int? Status { get; set; }
+        public string IdLogin { get; set; }
 
         public virtual ICollection<AssetBalance> AssetBalance { get; set; }
         public virtual ICollection<Order> OrderIdTraderANavigation { get; set; }

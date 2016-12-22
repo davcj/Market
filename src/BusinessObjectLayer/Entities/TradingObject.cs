@@ -11,6 +11,7 @@ namespace BusinessObjectLayer.Entities
             SocialMedia = new HashSet<SocialMedia>();
             Tick = new HashSet<Tick>();
             Trader = new HashSet<Trader>();
+            TradingObjectCategory = new HashSet<TradingObjectCategory>();
         }
 
         public int IdTradingObject { get; set; }
@@ -22,6 +23,7 @@ namespace BusinessObjectLayer.Entities
         public virtual ICollection<SocialMedia> SocialMedia { get; set; }
         public virtual ICollection<Tick> Tick { get; set; }
         public virtual ICollection<Trader> Trader { get; set; }
+        public virtual ICollection<TradingObjectCategory> TradingObjectCategory { get; set; }
         public virtual Trader IdTraderNavigation { get; set; }
     }
 }

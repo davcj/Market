@@ -14,6 +14,125 @@ namespace BusinessObjectLayer.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<AspNetRoleClaims>(entity =>
+            {
+                entity.HasIndex(e => e.RoleId)
+                    .HasName("IX_AspNetRoleClaims_RoleId");
+
+                entity.Property(e => e.RoleId)
+                    .IsRequired()
+                    .HasMaxLength(450);
+
+                entity.HasOne(d => d.Role)
+                    .WithMany(p => p.AspNetRoleClaims)
+                    .HasForeignKey(d => d.RoleId);
+            });
+
+            modelBuilder.Entity<AspNetRoles>(entity =>
+            {
+                entity.HasIndex(e => e.NormalizedName)
+                    .HasName("RoleNameIndex");
+
+                entity.Property(e => e.Id).HasMaxLength(450);
+
+                entity.Property(e => e.Name).HasMaxLength(256);
+
+                entity.Property(e => e.NormalizedName).HasMaxLength(256);
+            });
+
+            modelBuilder.Entity<AspNetUserClaims>(entity =>
+            {
+                entity.HasIndex(e => e.UserId)
+                    .HasName("IX_AspNetUserClaims_UserId");
+
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .HasMaxLength(450);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.AspNetUserClaims)
+                    .HasForeignKey(d => d.UserId);
+            });
+
+            modelBuilder.Entity<AspNetUserLogins>(entity =>
+            {
+                entity.HasKey(e => new { e.LoginProvider, e.ProviderKey })
+                    .HasName("PK_AspNetUserLogins");
+
+                entity.HasIndex(e => e.UserId)
+                    .HasName("IX_AspNetUserLogins_UserId");
+
+                entity.Property(e => e.LoginProvider).HasMaxLength(450);
+
+                entity.Property(e => e.ProviderKey).HasMaxLength(450);
+
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .HasMaxLength(450);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.AspNetUserLogins)
+                    .HasForeignKey(d => d.UserId);
+            });
+
+            modelBuilder.Entity<AspNetUserRoles>(entity =>
+            {
+                entity.HasKey(e => new { e.UserId, e.RoleId })
+                    .HasName("PK_AspNetUserRoles");
+
+                entity.HasIndex(e => e.RoleId)
+                    .HasName("IX_AspNetUserRoles_RoleId");
+
+                entity.HasIndex(e => e.UserId)
+                    .HasName("IX_AspNetUserRoles_UserId");
+
+                entity.Property(e => e.UserId).HasMaxLength(450);
+
+                entity.Property(e => e.RoleId).HasMaxLength(450);
+
+                entity.HasOne(d => d.Role)
+                    .WithMany(p => p.AspNetUserRoles)
+                    .HasForeignKey(d => d.RoleId);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.AspNetUserRoles)
+                    .HasForeignKey(d => d.UserId);
+            });
+
+            modelBuilder.Entity<AspNetUserTokens>(entity =>
+            {
+                entity.HasKey(e => new { e.UserId, e.LoginProvider, e.Name })
+                    .HasName("PK_AspNetUserTokens");
+
+                entity.Property(e => e.UserId).HasMaxLength(450);
+
+                entity.Property(e => e.LoginProvider).HasMaxLength(450);
+
+                entity.Property(e => e.Name).HasMaxLength(450);
+            });
+
+            modelBuilder.Entity<AspNetUsers>(entity =>
+            {
+                entity.HasIndex(e => e.NormalizedEmail)
+                    .HasName("EmailIndex");
+
+                entity.HasIndex(e => e.NormalizedUserName)
+                    .HasName("UserNameIndex")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).HasMaxLength(450);
+
+                entity.Property(e => e.Email).HasMaxLength(256);
+
+                entity.Property(e => e.NormalizedEmail).HasMaxLength(256);
+
+                entity.Property(e => e.NormalizedUserName)
+                    .IsRequired()
+                    .HasMaxLength(256);
+
+                entity.Property(e => e.UserName).HasMaxLength(256);
+            });
+
             modelBuilder.Entity<AssetBalance>(entity =>
             {
                 entity.HasKey(e => e.IdAssetBalance)
@@ -40,6 +159,26 @@ namespace BusinessObjectLayer.Entities
                     .WithMany(p => p.AssetBalance)
                     .HasForeignKey(d => d.IdTrader)
                     .HasConstraintName("FK_ASSETBAL_RELATIONS_TRADER");
+            });
+
+            modelBuilder.Entity<Category>(entity =>
+            {
+                entity.HasKey(e => e.IdCategory)
+                    .HasName("PK_CATEGORY");
+
+                entity.Property(e => e.IdCategory)
+                    .HasColumnName("Id_Category")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.ChangeDate).HasColumnType("datetime");
+
+                entity.Property(e => e.CreateDate).HasColumnType("datetime");
+
+                entity.Property(e => e.Description).HasColumnType("text");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasColumnType("text");
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -235,6 +374,11 @@ namespace BusinessObjectLayer.Entities
 
                 entity.Property(e => e.IdAssetType).HasColumnName("Id_AssetType");
 
+                entity.Property(e => e.IdLogin)
+                    .IsRequired()
+                    .HasColumnName("Id_Login")
+                    .HasColumnType("text");
+
                 entity.Property(e => e.IdTradingObject).HasColumnName("Id_TradingObject");
 
                 entity.Property(e => e.InsertDate).HasColumnType("datetime");
@@ -295,9 +439,45 @@ namespace BusinessObjectLayer.Entities
                     .HasForeignKey(d => d.IdTrader)
                     .HasConstraintName("FK_TRADINGO_RELATIONS_TRADER");
             });
+
+            modelBuilder.Entity<TradingObjectCategory>(entity =>
+            {
+                entity.HasKey(e => new { e.IdCategory, e.IdTradingObject })
+                    .HasName("PK_RELATIONSHIP_10");
+
+                entity.HasIndex(e => e.IdCategory)
+                    .HasName("Relationship_10_FK");
+
+                entity.HasIndex(e => e.IdTradingObject)
+                    .HasName("Relationship_13_FK");
+
+                entity.Property(e => e.IdCategory).HasColumnName("Id_Category");
+
+                entity.Property(e => e.IdTradingObject).HasColumnName("Id_TradingObject");
+
+                entity.HasOne(d => d.IdCategoryNavigation)
+                    .WithMany(p => p.TradingObjectCategory)
+                    .HasForeignKey(d => d.IdCategory)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_RELATION_RELATIONS_CATEGORY");
+
+                entity.HasOne(d => d.IdTradingObjectNavigation)
+                    .WithMany(p => p.TradingObjectCategory)
+                    .HasForeignKey(d => d.IdTradingObject)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FK_RELATION_RELATIONS_TRADINGO");
+            });
         }
 
+        public virtual DbSet<AspNetRoleClaims> AspNetRoleClaims { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUserRoles> AspNetUserRoles { get; set; }
+        public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<AssetBalance> AssetBalance { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderStatusHistory> OrderStatusHistory { get; set; }
         public virtual DbSet<SocialMedia> SocialMedia { get; set; }
@@ -305,5 +485,6 @@ namespace BusinessObjectLayer.Entities
         public virtual DbSet<Tick> Tick { get; set; }
         public virtual DbSet<Trader> Trader { get; set; }
         public virtual DbSet<TradingObject> TradingObject { get; set; }
+        public virtual DbSet<TradingObjectCategory> TradingObjectCategory { get; set; }
     }
 }
