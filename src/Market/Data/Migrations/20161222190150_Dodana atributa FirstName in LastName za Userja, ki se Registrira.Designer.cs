@@ -8,9 +8,10 @@ using Market.Data;
 namespace Market.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20161222190150_Dodana atributa FirstName in LastName za Userja, ki se Registrira")]
+    partial class DodanaatributaFirstNameinLastNamezaUserjakiseRegistrira
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")

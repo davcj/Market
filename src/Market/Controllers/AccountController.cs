@@ -105,7 +105,8 @@ namespace Market.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                /*TUDI TUKAJ DODAMO POLJA, ki jhih za USERJA dodatno dajemo v BAZO*/
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , FirstName = model.FirstName, LastName = model.LastName };  /*TUDI TUKAJ DODAMO POLJA, ki jhih za USERJA dodatno dajemo v BAZO*/
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

@@ -230,6 +230,8 @@
 "E:\MARKET\src\Market\Data\ApplicationDbContext.cs"
 "E:\MARKET\src\Market\Data\Migrations\00000000000000_CreateIdentitySchema.cs"
 "E:\MARKET\src\Market\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs"
+"E:\MARKET\src\Market\Data\Migrations\20161222190150_Dodana atributa FirstName in LastName za Userja, ki se Registrira.cs"
+"E:\MARKET\src\Market\Data\Migrations\20161222190150_Dodana atributa FirstName in LastName za Userja, ki se Registrira.Designer.cs"
 "E:\MARKET\src\Market\Data\Migrations\ApplicationDbContextModelSnapshot.cs"
 "E:\MARKET\src\Market\Models\ApplicationUser.cs"
 "E:\MARKET\src\Market\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs"
