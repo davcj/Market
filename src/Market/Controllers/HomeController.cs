@@ -23,10 +23,18 @@ namespace Market.Controllers
              return View();
            
         }
-
+        
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
+
+            if (User.Identity.IsAuthenticated)
+            {
+                Debug.WriteLine("Uporabnik " + User.Identity.Name + " je loginan !!!");
+            }else
+            {
+                Debug.WriteLine("User ni loginan !!!");
+            }
 
             return View();
         }
